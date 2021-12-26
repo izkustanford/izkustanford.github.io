@@ -4,23 +4,23 @@
   <nav class="site-navigation" role="navigation">
     <ul>
       <li>
-        <a href="{{ '/' | prepend: site.baseurl }}">
+        <a href="{{ '/home.html' | prepend: site.baseurl }}">
           Home
         </a>
       </li>
-    {% for item in site.data.menu %}
-      <li {% if page.url == item.url %}class="active"{% endif %}>
-        {% if item.url contains 'http' %}
-          <a href="{{ item.url }}">
-            {{ item.title }}
-          </a>
-        {% else %}
-          <a href="{{ item.url | prepend: site.baseurl }}">
-            {{ item.title }}
-          </a>
-        {% endif %}
-      </li>
-    {% endfor %}
+      {% for item in menu %}
+        <li {% if page.url == item.url %}class="active"{% endif %}>
+          {% if item.url contains 'http' %}
+            <a href="{{ item.url }}">
+              {{ item.title }}
+            </a>
+          {% else %}
+            <a href="{{ item.url | prepend: site.baseurl }}">
+              {{ item.title }}
+            </a>
+          {% endif %}
+        </li>
+      {% endfor %}
     </ul>
   </nav>
 {% endif %}
