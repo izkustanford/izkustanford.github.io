@@ -1,7 +1,7 @@
 {% assign menu = site.data.menu %}
 
 {% if menu %}
-  <nav class="site-navigation" role="navigation">
+  <nav class="site-navigation {{ include.classes }}" role="navigation">
     <ul>
       <li>
         <a href="{{ '/home.html' | prepend: site.baseurl }}">
