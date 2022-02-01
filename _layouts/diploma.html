@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ site.title }}{% if page.title and page.title != "" %} &mdash; {{ page.title }}{% endif %}</title>
+
+    {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+
+    <link rel="stylesheet" href="{{ '/assets/css/diploma.css' | absolute_url }}?{{ site.time | date: '%s%N' }}">
+
+    {% include favicons.html %}
+
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
+      {%- include google-analytics.html -%}
+    {%- endif -%}
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Izkustanford University
+      </h1>
+
+      <img class="logo" src="{{ '/assets/images/emblem-izu.svg' | relative_url }}" alt="Izkustanford University" />
+
+      <div class="body">
+        <p>Izkustenford University upon the recommendation of the faculty hereby confers on</p>
+        <div class="body__input">
+          <span class="body__text --big">{{page.person}}</span>
+        </div>
+        the degree of
+        <div class="body__input">
+          <span class="body__text --normal">{{page.degree}}</span>
+        </div>
+        on <span class="date">{{page.date}}</span> together with all rights, priveleges and honors appertaining to that degree.
+      </div>
+
+      {{ content }}
+
+      <div class="footer">
+        <div class="signatures">
+          <div class="signature">
+            <div class="signature__name">John Doe</div>
+            <div class="signature__title">Chancellor</div>
+          </div>
+          <div class="signature">
+            <div class="signature__name">John Doe</div>
+            <div class="signature__title">President of the board</div>
+          </div>
+        </div>
+
+        <div class="signatures">
+          <div class="signature">
+            <div class="signature__name">John Doe</div>
+            <div class="signature__title">President of the University</div>
+          </div>
+          <div class="signature">
+            <div class="signature__name">John Doe</div>
+            <div class="signature__title">Director, Honors College</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
