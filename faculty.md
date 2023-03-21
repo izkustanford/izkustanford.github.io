@@ -16,7 +16,8 @@ title: IZ U Key People
 
 ## Faculty & Administration:
 1. [Head of Admission Office: Alena Valchkova, BSc, MA: Administration & Admissions. Faculty: Organisational Behavior.]({% link people/alena-valchkova.md %})
-2. Head of Maintenance: currently vacant.
-3. [Dean for Risk Management: Alex Korolev, CMC, CISSP, CRISC, PMP, PMI-ACP, Univ. Sp., D. Hons.]({% link people/alexey-korolev.md %})
-4. [Dean for IT & Business Development: Yury Kupriyanov, MSc, MBA.]({% link people/yury-kupriyanov.md %})
-5. [Dean for Applied Finance: Аrtem Gonov, BA, MSc]({% link people/artem-gonov.md %})
+2. [Head of Multimedia Lab: Anastasia Pakhorukova]({% link people/anastasia-pakhorukova.md %})
+3. Head of Maintenance: currently vacant.
+4. [Dean for Risk Management: Alex Korolev, CMC, CISSP, CRISC, PMP, PMI-ACP, Univ. Sp., D. Hons.]({% link people/alexey-korolev.md %})
+5. [Dean for IT & Business Development: Yury Kupriyanov, MSc, MBA.]({% link people/yury-kupriyanov.md %})
+6. [Dean for Applied Finance: Аrtem Gonov, BA, MSc]({% link people/artem-gonov.md %})
