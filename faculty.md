@@ -24,7 +24,7 @@ title: IZ U Key People
 
 <div style="border: 1px solid black; padding-top:1rem; margin-top:5rem" markdown=1>
 
-  ## In memoriam of
+  <h2>In memoriam of</h2>
 
   - [Vice President for Public Affairs: Constantine Pauk, B. Sc., P. Eng.]({% link people/obituary-constantine-pauk.md %})
 
