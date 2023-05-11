@@ -22,7 +22,7 @@ title: IZ U Key People
 6. [Dean for Applied Finance: Аrtem Gonov, BA, MSc]({% link people/artem-gonov.md %})
 
 
-<div style="border: 1px solid black; padding-top:1rem; margin-top:5rem">
+<div style="border: 1px solid black; padding-top:1rem; margin-top:5rem" markdown=1>
 
   ## In memoriam of
   - [Vice President for Public Affairs: Constantine Pauk, B. Sc., P. Eng.]({% link people/obituary-constantine-pauk.md %})
