@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Constantine Pauk
+subtitle--: B. Sc., P. Eng., Vice President for Public Affairs
 ---
 
 ![Constantine Pauk]({{ site.baseurl }}/assets/images/people/constantine-pauk.jpeg)
