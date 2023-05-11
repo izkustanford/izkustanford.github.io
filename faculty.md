@@ -10,8 +10,8 @@ title: IZ U Key People
 4. [Head Instructor: Alena Valchkova, BSc, MA]({% link people/alena-valchkova.md %})
 
 ## Strategic Advisory Board:
-2. [Corporate Design Officer: Dima Miroshnichenko, BA, MSc, PhD]({% link people/dima-miroshnichenko.md %})
-3. Неаd of Corporate Attire: Ostap Taran, BSc, Msc
+1. [Corporate Design Officer: Dima Miroshnichenko, BA, MSc, PhD]({% link people/dima-miroshnichenko.md %})
+2. Неаd of Corporate Attire: Ostap Taran, BSc, Msc
 
 ## Faculty & Administration:
 1. [Head of Admission Office: Alena Valchkova, BSc, MA: Administration & Admissions. Faculty: Organisational Behavior.]({% link people/alena-valchkova.md %})
