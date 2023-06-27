@@ -20,7 +20,7 @@ title: IZ U Key People
 4. [Dean for Risk Management: Alex Korolev, CMC, CISSP, CRISC, PMP, PMI-ACP, Univ. Sp., D. Hons.]({% link people/alexey-korolev.md %})
 5. [Dean for IT & Business Development: Yury Kupriyanov, MSc, MBA.]({% link people/yury-kupriyanov.md %})
 6. [Dean for Applied Finance: Аrtem Gonov, BA, MSc]({% link people/artem-gonov.md %})
-7. [Dean for Digital Product Management, BE, M.Ed, MSc, CSP-SM]({% link people/simon-kalinov.md %})
+7. [Dean for Digital Product Management: Simon Kalinov, BE, M.Ed, MSc, CSP-SM]({% link people/simon-kalinov.md %})
 
 
 <div style="border: 1px solid black; padding-top:1rem; margin-top:5rem" markdown=1>
