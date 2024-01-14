@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kostiantyn Osovyi
-subtitle: Dean of Business and Market Analysis
+subtitle: Dean for Business and Market Analysis
 ---
 
 ![Kostiantyn Osovyi]({{ site.baseurl }}/assets/images/people/kostiantyn-osovyi.jpeg)

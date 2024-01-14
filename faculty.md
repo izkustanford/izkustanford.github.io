@@ -21,7 +21,7 @@ title: IZ U Key People
 5. [Dean for IT & Business Development: Yury Kupriyanov, MSc, MBA.]({% link people/yury-kupriyanov.md %})
 6. [Dean for Applied Finance: Аrtem Gonov, BA, MSc]({% link people/artem-gonov.md %})
 7. [Dean for Digital Product Management: Simon Kalinov, BE, M.Ed, MSc, CSP-SM]({% link people/simon-kalinov.md %})
-8. [Dean of Business and Market Analysis: Kostiantyn Osovyi]({% link people/kostiantyn-osovyi.md %})
+8. [Dean for Business and Market Analysis: Kostiantyn Osovyi]({% link people/kostiantyn-osovyi.md %})
 
 
 <div style="border: 1px solid black; padding-top:1rem; margin-top:5rem" markdown=1>
