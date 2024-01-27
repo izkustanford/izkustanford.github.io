@@ -1,0 +1,22 @@
+---
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+const titles = [];
+if (title) titles.push(title);
+titles.push('Izkustanford University');
+const siteTitle = titles.join(' — ');
+---
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width' />
+  <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+  <meta name='generator' content={Astro.generator} />
+  {description && <meta name='description' content={description} />}
+  <title>{siteTitle}</title>
+  <link rel='stylesheet' href='/css/main.css' />
+</head>

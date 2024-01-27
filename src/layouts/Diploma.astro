@@ -1,0 +1,165 @@
+---
+import Head from '../components/Head.astro';
+import type { MarkdownLayoutProps } from 'astro';
+
+type Props = MarkdownLayoutProps<{
+  person?: string;
+  degree?: string;
+  date?: string;
+}>;
+
+const { frontmatter } = Astro.props;
+const { person, degree, date } = frontmatter;
+const title = `${person} - ${degree}`;
+---
+
+<!doctype html>
+<html lang='en'>
+  <Head title={title} />
+  <body>
+    <div class='container'>
+      <h1>Izkustanford University</h1>
+
+      <img
+        class='logo'
+        src='/images/emblem-izu.svg'
+        alt='Izkustanford University'
+      />
+
+      <div class='body'>
+        <p>
+          Izkustenford University upon the recommendation of the faculty hereby
+          confers on
+        </p>
+        <div class='body__input'>
+          <span class='body__text --big'>{person}</span>
+        </div>
+        the degree of
+        <div class='body__input'>
+          <span class='body__text --normal'>{degree}</span>
+        </div>
+        on <span class='date'>{date}</span> together with all rights, priveleges
+        and honors appertaining to that degree.
+      </div>
+
+      <slot />
+
+      <div class='footer'>
+        <div class='signatures'>
+          <div class='signature'>
+            <div class='signature__name'>Andrew Borisenko</div>
+            <div class='signature__title'>Chancellor</div>
+          </div>
+        </div>
+
+        <div class='signatures'>
+          <div class='signature'>
+            <div class='signature__name'>Victoria D. Wapf</div>
+            <div class='signature__title'>Chairlady</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @font-face {
+        font-family: 'Pinyon Script';
+        font-style: normal;
+        font-weight: 400;
+        font-display: auto;
+        src:
+          local('PinyonScript Regular'),
+          local('Pinyon Script Regular'),
+          local('PinyonScript-Regular'),
+          url('/fonts/pinyon-script/PinyonScript-Regular.ttf')
+            format('truetype');
+      }
+      @font-face {
+        font-family: 'Rochester';
+        font-style: normal;
+        font-weight: 400;
+        font-display: auto;
+        src:
+          local('Rochester Regular'),
+          local('Rochester-Regular'),
+          url('/assets/fonts/rochester/Rochester-Regular.ttf')
+            format('truetype');
+      }
+      body {
+        color: black;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Pinyon Script';
+        min-width: 100%;
+        min-height: 100vh;
+        padding: 2rem;
+      }
+      .container {
+        background-color: white;
+        border: 25px solid #b88846;
+        border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E")
+          25;
+        vertical-align: middle;
+        text-align: center;
+        padding: 2rem 5rem;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-family: var(--ff-oldStyle);
+        font-weight: normal;
+        font-size: 4rem;
+        margin: 0;
+        padding: 0;
+        color: #8d0022;
+      }
+      .logo {
+        width: 10rem;
+        margin: 1rem auto 0;
+      }
+      .body {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 1rem 0 0;
+        padding: 0;
+      }
+      .body .body__input {
+        display: block;
+        margin: 0.8rem auto 1.5rem;
+        width: auto;
+        font-family: var(--ff-oldStyle);
+      }
+      .body .body__input .--big {
+        font-size: 2rem;
+      }
+      .body .body__input .--normal {
+        font-size: 1.5rem;
+      }
+      .body .body__text {
+        padding: 0 2rem;
+        border-bottom: 1px solid black;
+      }
+      .body .body__date {
+        text-decoration: underline;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 0 1rem;
+      }
+      .signature {
+        margin: 1rem 0;
+      }
+      .signature .signature__name {
+        font-family: 'Rochester', cursive;
+        font-size: 1.5rem;
+      }
+      .signature .signature__title {
+        font-family: var(--ff-oldStyle);
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        color: #333;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+---
+import Head from '../components/Head.astro';
+import Menu from '../components/Menu.astro';
+import type { MarkdownLayoutProps } from 'astro';
+
+type Props = MarkdownLayoutProps<{
+  title?: string;
+  subtitle?: string;
+}>;
+
+const { frontmatter } = Astro.props;
+const { title, subtitle } = frontmatter;
+---
+
+<!doctype html>
+<html lang='en'>
+  <Head title={title} />
+  <body>
+    <Menu />
+    <main>
+      <hgroup>
+        <h1>{title}</h1>
+        <h2>{subtitle}</h2>
+        <slot />
+      </hgroup>
+    </main>
+    <Menu />
+    <style>
+      hgroup {
+        min-height: 70vh;
+        max-width: 80vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        font-size: 6em;
+        margin: 0;
+      }
+      h2 {
+        font-size: 3em;
+        margin: 1em 0 0 0;
+        color: #64644b;
+      }
+    </style>
+  </body>
+</html>

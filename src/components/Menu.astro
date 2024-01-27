@@ -1,0 +1,53 @@
+---
+const currentPath = new URL(Astro.request.url).pathname;
+
+const links: { href: string; text: string }[] = [
+  { href: '/', text: 'Home' },
+  { href: '/about', text: 'About' },
+  { href: '/faculty', text: 'Faculty' },
+  { href: '/contacts', text: 'Contacts' },
+];
+
+function getClass(href: string) {
+  if (href === currentPath) {
+    return 'active';
+  }
+  return '';
+}
+---
+
+<nav>
+  {
+    links.map(({ href, text }) => (
+      <li>
+        <a class={getClass(href)} href={href}>
+          {text}
+        </a>
+      </li>
+    ))
+  }
+</nav>
+
+<style>
+  nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    font-variant: small-caps;
+    font-size: 0.875em;
+    letter-spacing: -0.05em;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  nav a.active,
+  nav a:hover {
+    text-decoration: underline;
+  }
+</style>
