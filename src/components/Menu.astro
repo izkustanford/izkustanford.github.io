@@ -8,15 +8,19 @@ const links: { href: string; text: string }[] = [
   { href: '/contacts', text: 'Contacts' },
 ];
 
+function isActive(href: string) {
+  return href === currentPath;
+}
+
 function getClass(href: string) {
-  if (href === currentPath) {
+  if (isActive(href)) {
     return 'active';
   }
   return '';
 }
 ---
 
-<nav>
+<menu role='navigation'>
   {
     links.map(({ href, text }) => (
       <li>
@@ -26,10 +30,10 @@ function getClass(href: string) {
       </li>
     ))
   }
-</nav>
+</menu>
 
 <style>
-  nav {
+  menu {
     list-style: none;
     display: flex;
     align-items: center;
