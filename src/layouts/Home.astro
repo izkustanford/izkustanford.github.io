@@ -28,7 +28,7 @@ const { title, subtitle } = frontmatter;
     <style>
       hgroup {
         min-height: 70vh;
-        max-width: 80vw;
+        max-width: 90vw;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -36,13 +36,38 @@ const { title, subtitle } = frontmatter;
         align-items: center;
       }
       h1 {
-        font-size: 6em;
         margin: 0;
+        word-break: normal;
       }
       h2 {
-        font-size: 3em;
         margin: 1em 0 0 0;
         color: #64644b;
+        word-break: normal;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+      h2 {
+        font-size: 2em;
+      }
+
+      @media screen and (min-width: 480px) {
+        h1 {
+          font-size: 4em;
+        }
+        h2 {
+          font-size: 2.5em;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        h1 {
+          font-size: 6em;
+        }
+        h2 {
+          font-size: 3em;
+        }
       }
     </style>
   </body>
