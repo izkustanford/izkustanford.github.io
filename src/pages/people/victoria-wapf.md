@@ -3,6 +3,7 @@ title: Dr. med. Victoria D. Wapf
 subtitle: Chairlady
 patreon: victoria2022
 buymeacoffee: Izkustanford
+revolut: gadolinium
 ---
 
 ![Dr. med. Victoria D. Wapf](/images/people/victoria-wapf.jpeg)
