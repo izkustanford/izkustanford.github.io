@@ -1,0 +1,72 @@
+---
+import Head from '../components/Head.astro';
+import Menu from '../components/Menu.astro';
+import SvgDivider from '../components/SvgDivider.astro';
+import Donations from '../components/Donations.astro';
+import type { MarkdownLayoutProps } from 'astro';
+
+type Props = MarkdownLayoutProps<{
+  title?: string;
+  subtitle?: string;
+  patreon?: string;
+  buymeacoffee?: string;
+}>;
+
+const { frontmatter } = Astro.props;
+const { title, subtitle, patreon, buymeacoffee } = frontmatter;
+---
+
+<!doctype html>
+<html lang='en'>
+  <Head title={title} />
+  <body>
+    <Menu />
+    <main>
+      <article>
+        {title && <h1 class='header'>{title}</h1>}
+        {title && <SvgDivider class='divider' />}
+        {subtitle && <h2 class='subheader'>{subtitle}</h2>}
+        <slot />
+        <Donations patreon={patreon} buymeacoffee={buymeacoffee} />
+      </article>
+    </main>
+    <Menu />
+    <style>
+      main {
+        background: white;
+        margin: 0 auto 3rem;
+        width: 100%;
+        max-width: 60rem;
+        padding: 4rem 1rem 7rem;
+        box-shadow:
+          rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.04) 0px 0px 0px 0.1rem;
+        border-radius: 0.2rem;
+      }
+      @media screen and (min-width: 480px) {
+        main {
+          width: calc(100% - 2rem);
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+      article {
+        margin: 0 auto;
+        max-width: 34rem;
+      }
+      .header {
+        text-align: center;
+        font-size: 2em;
+      }
+      .header,
+      .subheader {
+        margin: 0;
+      }
+      .divider {
+        display: block;
+        max-width: 10rem;
+        margin: 2rem auto;
+      }
+    </style>
+  </body>
+</html>

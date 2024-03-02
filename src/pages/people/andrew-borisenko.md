@@ -1,6 +1,6 @@
 ---
 title: Professor s.d.o. Andrew Borisenko
-subtitle: Chancellor
+patreon: seigiard
 ---
 
 ![Andrew Borisenko](/images/people/andrew-borisenko.jpeg)
