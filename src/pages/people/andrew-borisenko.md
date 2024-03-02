@@ -1,6 +1,6 @@
 ---
 title: Professor s.d.o. Andrew Borisenko
-patreon: seigiard
+revolut: seigiard
 ---
 
 ![Andrew Borisenko](/images/people/andrew-borisenko.jpeg)

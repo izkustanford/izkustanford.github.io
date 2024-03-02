@@ -10,10 +10,11 @@ type Props = MarkdownLayoutProps<{
   subtitle?: string;
   patreon?: string;
   buymeacoffee?: string;
+  revolut?: string;
 }>;
 
 const { frontmatter } = Astro.props;
-const { title, subtitle, patreon, buymeacoffee } = frontmatter;
+const { title, subtitle, patreon, buymeacoffee, revolut } = frontmatter;
 ---
 
 <!doctype html>
@@ -27,7 +28,11 @@ const { title, subtitle, patreon, buymeacoffee } = frontmatter;
         {title && <SvgDivider class='divider' />}
         {subtitle && <h2 class='subheader'>{subtitle}</h2>}
         <slot />
-        <Donations patreon={patreon} buymeacoffee={buymeacoffee} />
+        <Donations
+          patreon={patreon}
+          buymeacoffee={buymeacoffee}
+          revolut={revolut}
+        />
       </article>
     </main>
     <Menu />
