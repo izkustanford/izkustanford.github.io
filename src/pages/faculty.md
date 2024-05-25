@@ -21,6 +21,7 @@ title: IZ U Key People
 6. [Dean for Applied Finance: Аrtem Gonov, BA, MSc](/people/artem-gonov)
 7. [Dean for Digital Product Management: Simon Kalinov, BE, M.Ed, MSc, CSP-SM](/people/simon-kalinov)
 8. [Dean for Business and Market Analysis: Kostiantyn Osovyi](/people/kostiantyn-osovyi)
+8. [Dean of the Department of Underwater Basket Weaving: Andrei Muntanion](/people/andrei-muntanion)
 
 
 <div style="border: 1px solid black; padding:2rem; margin-top:5rem; margin-left:-2rem; margin-right:-2rem;" markdown=1>

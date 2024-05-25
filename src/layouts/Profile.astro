@@ -25,8 +25,8 @@ const { title, subtitle, patreon, buymeacoffee, revolut } = frontmatter;
     <main>
       <article>
         {title && <h1 class='header'>{title}</h1>}
-        {title && <SvgDivider class='divider' />}
         {subtitle && <h2 class='subheader'>{subtitle}</h2>}
+        {title && <SvgDivider class='divider' />}
         <slot />
         <Donations
           patreon={patreon}
@@ -59,13 +59,17 @@ const { title, subtitle, patreon, buymeacoffee, revolut } = frontmatter;
         margin: 0 auto;
         max-width: 34rem;
       }
+      article > :global(p) > :global(img) {
+        margin: 0 auto;
+      }
       .header {
         text-align: center;
         font-size: 2em;
-      }
-      .header,
-      .subheader {
         margin: 0;
+      }
+      .subheader {
+        font-size: 1.5em;
+        margin: 0.5rem 0 0;
       }
       .divider {
         display: block;

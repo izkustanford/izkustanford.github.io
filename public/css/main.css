@@ -135,6 +135,7 @@ h4 {
   text-align: center;
   word-break: break-word;
   hyphens: auto;
+  text-wrap: balance;
 }
 
 h1 {
