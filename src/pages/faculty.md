@@ -5,7 +5,6 @@ title: IZ U Key People
 ## Board of Directors:
 1. [Chancellor: Prof. s.d.o. Andrew Borisenko](/people/andrew-borisenko)
 2. [Chief Operation Officer: Dima Miroshnichenko, BA, MSc, PhD](/people/dima-miroshnichenko)
-3. [Director of development: Dr. med. Victoria Wapf](/people/victoria-wapf)
 4. [Head Instructor: Alena Valchkova, BSc, MA](/people/alena-valchkova)
 
 ## Strategic Advisory Board:

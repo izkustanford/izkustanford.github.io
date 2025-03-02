@@ -19,13 +19,18 @@ const { title, subtitle } = frontmatter;
     <Menu />
     <main>
       <hgroup>
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
+        <img src="images/univercity-closed.jpg" alt="University is closed" />
+        <h1>Izkustanford University</h1>
+        <h2>Project is closed</h2>
+        <h2>2020 — 2025</h2>
         <slot />
       </hgroup>
     </main>
     <Menu />
     <style>
+      body {
+        background-color: #403A37;
+      }
       hgroup {
         min-height: 70vh;
         max-width: 90vw;
@@ -35,14 +40,28 @@ const { title, subtitle } = frontmatter;
         justify-content: center;
         align-items: center;
       }
+      img {
+        min-height: 20rem;
+        height: 100%;
+        max-height: 50vh;
+      }
       h1 {
-        margin: 0;
+        margin: -10vh 0 0.2em 0;
+        line-height: 0.7;
         word-break: normal;
+        color: #e1ca63;
+        text-shadow:
+          0 0 1px #403a37,
+          0 0 2px #403a37,
+          0 0 3px #403a37,
+          0 0 4px #403a37,
+          0 0 5px #403a37,
+          0 0 6px #403a37;
       }
       h2 {
-        margin: 1em 0 0 0;
-        color: #64644b;
+        margin: 0;
         word-break: normal;
+        color: #c19f59;
       }
 
       h1 {
