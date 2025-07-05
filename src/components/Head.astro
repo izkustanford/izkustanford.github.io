@@ -2,9 +2,10 @@
 type Props = {
   title?: string;
   description?: string;
+  redirect?: boolean;
 };
 
-const { title, description } = Astro.props;
+const { title, description, redirect } = Astro.props;
 const titles = [];
 if (title) titles.push(title);
 titles.push('Izkustanford University');
@@ -23,6 +24,7 @@ const siteTitle = titles.join(' — ');
   <link rel='manifest' href='/favicon/manifest.webmanifest' />
   <meta name='generator' content={Astro.generator} />
   {description && <meta name='description' content={description} />}
+  {redirect && <meta http-equiv='refresh' content='0; url=/' />}
   <title>{siteTitle}</title>
   <link rel='stylesheet' href='/css/main.css' />
 </head>

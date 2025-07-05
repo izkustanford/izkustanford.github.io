@@ -1,7 +1,6 @@
 ---
-import Head from '../components/Head.astro';
-import Menu from '../components/Menu.astro';
 import type { MarkdownLayoutProps } from 'astro';
+import Head from '../components/Head.astro';
 
 type Props = MarkdownLayoutProps<{
   title?: string;
@@ -16,7 +15,6 @@ const { title, subtitle } = frontmatter;
 <html lang='en'>
   <Head title={title} />
   <body>
-    <Menu />
     <main>
       <hgroup>
         <img src="images/univercity-closed.jpg" alt="University is closed" />
@@ -26,13 +24,12 @@ const { title, subtitle } = frontmatter;
         <slot />
       </hgroup>
     </main>
-    <Menu />
     <style>
       body {
         background-color: #403A37;
       }
       hgroup {
-        min-height: 70vh;
+        min-height: 90vh;
         max-width: 90vw;
         margin: 0 auto;
         display: flex;
@@ -44,6 +41,7 @@ const { title, subtitle } = frontmatter;
         min-height: 20rem;
         height: 100%;
         max-height: 50vh;
+        aspect-ratio: 1/1;
       }
       h1 {
         margin: -10vh 0 0.2em 0;
@@ -61,7 +59,6 @@ const { title, subtitle } = frontmatter;
       h2 {
         margin: 0;
         word-break: normal;
-        color: #c19f59;
       }
 
       h1 {
