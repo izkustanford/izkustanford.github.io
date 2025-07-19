@@ -118,20 +118,22 @@
     const popover = document.getElementById('player-popover');
     const videoContainer = document.querySelector('.video-container');
 
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && popover.matches(':popover-open')) {
-        popover.hidePopover();
-      }
-    });
-
-    popover.addEventListener('click', function(event) {
-      // Если клик пришелся на popover, но не на video-container или его дочерние элементы
-      if (event.target === popover || !videoContainer.contains(event.target)) {
-        // Проверяем, что клик не на кнопке закрытия (она уже имеет свой обработчик)
-        if (!event.target.closest('.close-button')) {
+    if (popover && videoContainer) {
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && popover.matches(':popover-open')) {
           popover.hidePopover();
         }
-      }
-    });
+      });
+
+      popover.addEventListener('click', function(event) {
+        const target = event.target as HTMLElement;
+        if (!target || target === null || target !== popover) {
+          return
+        }
+        if (!target?.closest('.close-button') && !videoContainer.contains(target)) {
+          popover.hidePopover();
+        }
+      });
+    }
   });
 </script>
