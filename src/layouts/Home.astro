@@ -1,6 +1,7 @@
 ---
 import type { MarkdownLayoutProps } from 'astro';
 import Head from '../components/Head.astro';
+import Player from '../components/Player.astro';
 
 type Props = MarkdownLayoutProps<{
   title?: string;
@@ -22,6 +23,7 @@ const { title, subtitle } = frontmatter;
         <h2>The project is closed</h2>
         <h2>2020 — 2025</h2>
         <slot />
+        <Player />
       </hgroup>
     </main>
     <style>

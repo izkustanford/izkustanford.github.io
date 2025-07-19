@@ -5,6 +5,8 @@
     serif;
   --ff-handwritten: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual,
     cursive;
+  --ff-humanist: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  --ff-antique: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
 }
 
 /* Box sizing rules */

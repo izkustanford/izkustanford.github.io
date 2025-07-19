@@ -1,0 +1,137 @@
+---
+---
+<button
+  id="open-player"
+  popovertarget="player-popover"
+  class="player-button"
+>
+  The Graduates' Song
+</button>
+
+<div
+  id="player-popover"
+  popover="auto"
+  class="player-popover"
+>
+  <button
+    popovertarget="player-popover"
+    popovertargetaction="hide"
+    class="close-button"
+    aria-label="Закрыть"
+  >
+    ×
+  </button>
+
+  <div class="video-container">
+    <iframe
+      class="video-iframe"
+      src="https://www.youtube.com/embed/BiVmHOMYg5c?si=Btw7wxVCOPN48-sM"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    >
+    </iframe>
+  </div>
+</div>
+
+
+<style>
+  .player-button {
+    margin: 2rem auto;
+    background: #E0CA63;
+    color: #403A37;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.72), 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.64);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-family: var(--ff-humanist);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color, box-shadow 0.2s ease;
+  }
+
+  .player-button:hover {
+    background: #C19E59;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.52), 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.64);
+  }
+
+  .player-popover {
+    width: 100%;
+    height: 100%;
+  }
+  .player-popover:popover-open {
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .player-popover::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #f5f5f5;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #666;
+    transition: background-color 0.2s ease;
+  }
+
+  .close-button:hover {
+    background: #e0e0e0;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .video-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+  }
+</style>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const popover = document.getElementById('player-popover');
+    const videoContainer = document.querySelector('.video-container');
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && popover.matches(':popover-open')) {
+        popover.hidePopover();
+      }
+    });
+
+    popover.addEventListener('click', function(event) {
+      // Если клик пришелся на popover, но не на video-container или его дочерние элементы
+      if (event.target === popover || !videoContainer.contains(event.target)) {
+        // Проверяем, что клик не на кнопке закрытия (она уже имеет свой обработчик)
+        if (!event.target.closest('.close-button')) {
+          popover.hidePopover();
+        }
+      }
+    });
+  });
+</script>
